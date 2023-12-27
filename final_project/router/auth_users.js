@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken');
 let books = require("./booksdb.js");
 const regd_users = express.Router();
 
+let users = [];
+
 const isValid = (username)=>{ //returns boolean
   if(username.length >= 4){
     return true;
@@ -40,6 +42,9 @@ regd_users.post("/login", (req,res) => {
   }else{
     return res.status(404).json({message:"Error Loggin in"});
   }
+  res.json({token});
+
+
 });
 
 // Add a book review
