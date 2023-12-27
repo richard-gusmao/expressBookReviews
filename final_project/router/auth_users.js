@@ -42,8 +42,6 @@ regd_users.post("/login", (req,res) => {
   }else{
     return res.status(404).json({message:"Error Loggin in"});
   }
-  res.json({token});
-
 
 });
 
