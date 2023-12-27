@@ -59,7 +59,7 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
     books[isbn].reviews[username] = {'review':review};
   }
 
-  return res.status(200).send(JSON.stringify(books[isbn]));
+  return res.status(200).send("Review added");
 });
 
 regd_users.delete("/auth/review/:isbn", (req, res)=>{
